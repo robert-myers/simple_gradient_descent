@@ -108,3 +108,11 @@ def gradient_descent(X, y, b=0, m=0, learning_rate=0.01, num_iterations=1000, y_
 		return b, m, y_predictions
 	else:
 		return b, m
+
+def mean_squared_error(y, y_predictions, root=True):
+	mean_squared_error = np.average(np.square(y - y_predictions))
+	if root:
+		root_mean_squared_error = np.sqrt(mean_squared_error)
+		return root_mean_squared_error
+	else:
+		return mean_squared_error
