@@ -74,3 +74,9 @@ def step_gradient(x, y, b_current, m_current, learning_rate=0.01):
 	m = m_current - (learning_rate * m_gradient)
 	step = np.array([b, m])
 	return step
+
+def gradient_descent(x, y, learning_rate, num_iterations, b=0, m=0):
+	for _ in range(num_iterations):
+		b, m = step_gradient(x, y, b, m, learning_rate)
+	step_final = np.array([b, m])
+	return step_final
