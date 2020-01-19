@@ -61,7 +61,7 @@ def step_gradient(x, y, b_current, m_current, learning_rate=0.01):
 	m_current : int or float
 		The current slope guess.
 	learning_rate : float
-		The proportional size of step to take.
+		The proportional size of step to take (the default is 0.01).
 
 	Returns
 	-------
