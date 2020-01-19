@@ -92,7 +92,8 @@ def gradient_descent(X, y, b=0, m=0, learning_rate=0.01, num_iterations=1000, y_
 	num_iterations : int
 		The number of steps to descend (the default is 1000).
 	y_predict : bool
-		Whether or not to calculate the y_predictions and return them.
+		Whether or not to calculate the y_predictions
+		and return them (the defualt is False).
 
 	Returns
 	-------
