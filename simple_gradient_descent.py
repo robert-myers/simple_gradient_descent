@@ -110,6 +110,23 @@ def gradient_descent(X, y, b=0, m=0, learning_rate=0.01, num_iterations=1000, y_
 		return b, m
 
 def mean_squared_error(y, y_predictions, root=True):
+	"""
+	Parameters
+	----------
+	y : array of float
+		The true Y coordinates also known as theta values.
+	y_predictions : array of float
+		The predicted Y coordinates also known as theta hat values.
+	root : bool
+		Whether or not to calculate and return the
+		sqaure root of the mean squared error (the default is True).
+
+	Returns
+	-------
+	root_mean_squared_error or mean_squared_error : float
+		The square root of the mean squared error or
+		optionally the mean squared error.
+	"""
 	mean_squared_error = np.average(np.square(y - y_predictions))
 	if root:
 		root_mean_squared_error = np.sqrt(mean_squared_error)
