@@ -135,6 +135,19 @@ def mean_squared_error(y, y_predictions, root=True):
 		return mean_squared_error
 
 def r_squared(y, y_predictions):
+	"""
+	Parameters
+	----------
+	y : array of float
+		The true Y coordinates also known as theta values.
+	y_predictions : array of float
+		The predicted Y coordinates also known as theta hat values.
+
+	Returns
+	-------
+	r_squared : float
+		The coefficient of determination.
+	"""
 	ssr = np.sum(np.square(y - y_predictions))
 	sst = np.sum(np.square(y - np.mean(y)))
 	r_squared = 1 - (ssr / sst)
