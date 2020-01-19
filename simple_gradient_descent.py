@@ -2,15 +2,23 @@ import numpy as np
 
 def get_gradient_at_b(x, y, m, b):
 	"""
-	INPUT
-	x: array of x values
-	y: array of y values
-	m: slope
-	b: intercept
+	Parameters
+	----------
+	x : array_like of int or float
+		The X coordinates.
+	y : array_like of int or float
+		The Y coordinates.
+	m : int or float
+		The slope.
+	b : int or float
+		The intercept.
 
-	OUTPUT
-	gradient at intercept
+	Returns
+	-------
+	b_gradient : float
+		The gradient at the intercept.
 	"""
+	x, y = np.array(x), np.array(y)
 	N = len(x)
 	diff = np.sum(y - (m * x + b))
 	b_gradient = -2/N * diff
@@ -18,15 +26,23 @@ def get_gradient_at_b(x, y, m, b):
 
 def get_gradient_at_m(x, y, m, b):
 	"""
-	INPUT
-	x: array of x values
-	y: array of y values
-	m: slope
-	b: intercept
+	Parameters
+	----------
+	x : array_like of int or float
+		The X coordinates.
+	y : array_like of int or float
+		The Y coordinates.
+	m : int or float
+		The slope.
+	b : int or float
+		The intercept.
 
-	OUTPUT
-	gradient at slope
+	Returns
+	-------
+	m_gradient : float
+		The gradient at the slope.
 	"""
+	x, y = np.array(x), np.array(y)
 	N = len(x)
 	diff = np.sum(x * (y - (m * x + b)))
 	m_gradient = -2/N * diff
